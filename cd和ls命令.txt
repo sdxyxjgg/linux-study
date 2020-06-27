@@ -1,0 +1,27 @@
+cd
+cd ~    家目录（cd ~xjgg）
+cd -    回到刚才的目录
+cd ..   上一级
+
+
+
+
+
+ls
+ls -a
+ls -al
+ls -l
+ll
+ls -li  回去文件id
+ls -hl  文件大小好认
+ls -lhS     按文件大小排序（大到小）
+ls -lhSr    反过来（就是小到大）
+ls -tl      根据时间排序大到小
+ls -tlr     反过来（就是小到大）
+ls -l --full-time   显示每个文件最后修改的时间
+touch -t 2005210521  修改文件最后修改的时间
+
+
+
+
+

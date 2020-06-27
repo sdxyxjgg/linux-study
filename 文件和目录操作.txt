@@ -1,0 +1,54 @@
+文件
+
+写内容
+echo "内容" >>111.txt
+vim 111.txt
+
+
+查看内容    
+cat 111.txt
+less 111.txt  (这个可以在看的时候找关键字  （n下一个，N上一个）)
+more 111.txt
+tail -5 111.txt     看倒数五行内容（注意不是第五行）
+head -5 111.txt     看前五行
+
+
+复制
+cp 111.txt /tmp/222.txt   复制并改名
+mv 111.txt /tmp/222.txt   移动并改名
+mv 111.txt 222.txt   改名
+当复制文件夹时，文件夹里面有文件时，需要加上-r
+scp 远程复制
+//ssh test@123.56.53.234(远程登录)
+scp 111.txt test@123.56.53.234:/home/test/222.txt
+
+
+
+
+目录
+pwd 当前位置
+dirname ~   上一级的目录名字
+basename ~  当前目录的名字
+
+创建   mkdir
+mkdir -p html/dev/tmp/www       创建多级目录
+tree html
+删除   rmdir  只能删除空目录
+rmdir -p html/dev/tmp/www   删除所有空目录
+
+
+
+搜索功能
+find
+find / -name index.html     从根目录开始找index.html文件
+find / -size +6000k     查找文件大小大于6000k的
+find / -name abcd.txt -exec cat {} \;   查到一个文件执行以下cat
+
+locate index.html   从自带数据库中查询，可能刚写的文件查不到，他自己会一天更新一次，想查今天
+的就要：
+updatedb
+
+（
+    find  查找文件会慢，影响效率
+    locate  查找文件快
+）

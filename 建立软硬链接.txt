@@ -1,0 +1,19 @@
+软连接
+echo $PATH
+ln -s /home/xjgg/xjgg.sh /usr/bin/xjgg
+(
+    创建一个脚本文件xjgg.sh的软连接xjgg
+    并把xjgg放到PATH里面有的文件夹内
+    这样就可以直接xjgg，执行xjgg.sh脚本啦
+)
+
+硬链接（注意的是被引用次数（rwx后面那个数字））
+（软连接是不会增加引用次数的）
+（硬链接就会，硬链接后，文件id相同）
+ln ./xjgg.sh xjgg.sh.bak2
+
+
+(
+    软连接：就像windows里面的快捷方式一样，原文件改变，他就改变，原文件删除，他就没用
+    硬链接：原文件改变，他就改变，原文件删除，他就代替了原文件
+)

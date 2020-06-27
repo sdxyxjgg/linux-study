@@ -1,0 +1,8 @@
+who   检测都有谁使用着本服务器
+
+shutdown -h now     马上关机
+shutdown -h +10 "描述：10分钟后关机"    
+（执行这个之后，10分钟后会关机，同时提醒其他正在使用的用户）
+shutdown -r now   马上重启
+
+reboot      重启

@@ -1,0 +1,36 @@
+d rwx(u) rwx(g) r-x(o)
+(u:所属者,g:所属组,o:其他人)
+d:文件夹    
+r:可读      （4）
+w:可写      （2）
+x:可执行    （1）
+
+账号（用户）：user
+角色（用户组）：group
+
+（
+    一个文件夹没有写权限，
+    里面的一个文件有写的权限，
+    你可以写内容到这个文件，
+    但是你不能修改这个文件的名字，也不能删除文件
+）
+
+umask -S   获取当前创建文件默认给的权限
+rwxrxrx     创建文件是不给x，创建文件夹时给x
+umask 022  修改创建文件默认给的权限
+
+
+chmod       设置文件或文件夹权限（u，g，o）(r,w,x)(4,2,1)
+chmod 755
+chmod u=rw,g=rw,o=r
+chmod o+w  添加权限
+chmod o-w  减少权限
+chmod -r   全部减少r权限
+
+
+
+改变用户和用户组
+chown
+chown test 111.txt  修改用户名
+chown test:test 111.txt 修改用户名和用户组
+

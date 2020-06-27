@@ -1,0 +1,2 @@
+:set nu   设置行号
+:set tabstop=2      高亮
